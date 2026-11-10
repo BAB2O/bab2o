@@ -1,0 +1,474 @@
+<!doctype html>
+<!-- bab2o -->
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' data:; media-src 'self' blob:; font-src 'self'; frame-src 'self'; object-src 'none'; base-uri 'self'; form-action 'none'">
+  <meta name="referrer" content="strict-origin-when-cross-origin">
+  <meta name="author" content="Housna Baboorally">
+  <title>Portfolio d'Housna</title>
+  <meta name="description" content="Portfolio de Housna Baboorally, UX/UI designer à Paris : interfaces claires et accessibles, de la recherche utilisateur à l'intégration. Ouverte à un CDI dès janvier 2027.">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Portfolio d&#39;Housna – UX/UI Designer">
+  <meta property="og:description" content="Interfaces claires et accessibles, de la recherche utilisateur à l'intégration. Ouverte à un CDI dès janvier 2027.">
+  <link rel="canonical" href="https://bab2o.fr/">
+  <meta property="og:url" content="https://bab2o.fr/">
+  <meta property="og:image" content="https://bab2o.fr/og.jpg">
+  <meta property="og:image:width" content="1200"><meta property="og:image:height" content="630">
+  <meta property="og:locale" content="fr_FR">
+  <meta name="twitter:card" content="summary_large_image">
+  <link rel="icon" type="image/png" href="favicon.png">
+  <link rel="apple-touch-icon" href="apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/albert-sans-400.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<a class="skip" href="#contenu" data-i18n="skip">Aller au contenu</a>
+<div class="cur" id="cur" aria-hidden="true"><div class="cur-ring"><span class="cur-lbl"></span></div><div class="cur-dot"></div></div>
+
+<header class="top" id="top">
+  <div class="wrap bar">
+    <a class="logo" href="#contenu" data-i18n-aria="home" aria-label="Housna Baboorally, retour en haut de page"><img src="assets/img/logo.png" alt=""></a>
+    <nav class="main" id="mainNav" data-i18n-aria="navLabel" aria-label="Navigation principale">
+      <span class="ind" aria-hidden="true"></span>
+      <a href="#projets" data-i18n="n1">Projets</a>
+      <a href="#apropos" data-i18n="n2">À propos</a>
+      <a href="#expertises" data-i18n="n3">Expertises</a>
+      <a href="#outils" data-i18n="n4">Outils</a>
+    </nav>
+    <div class="right">
+      <span class="hclock" id="hclock" aria-label="Heure à Paris"></span>
+      <button class="ctl mode" type="button" data-mode-btn aria-label="Passer en mode clair">
+        <svg viewBox="0 0 24 24" aria-hidden="true">
+          <mask id="mm1"><rect x="-10" y="-10" width="44" height="44" fill="white"/><circle class="bite" r="6.5" cx="17" cy="7" fill="black"/></mask>
+          <circle class="orb" cx="12" cy="12" r="8" fill="currentColor" mask="url(#mm1)"/>
+          <g class="rays" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.9" y1="4.9" x2="6.3" y2="6.3"/><line x1="17.7" y1="17.7" x2="19.1" y2="19.1"/><line x1="4.9" y1="19.1" x2="6.3" y2="17.7"/><line x1="17.7" y1="6.3" x2="19.1" y2="4.9"/></g>
+        </svg>
+      </button>
+      <div class="seg" role="group" data-i18n-aria="langLabel" aria-label="Langue" data-lang="fr" data-lang-seg>
+        <span class="knob" aria-hidden="true"></span>
+        <button type="button" data-lang="fr" lang="fr" aria-pressed="true" aria-label="Français">FR</button>
+        <button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button>
+      </div>
+      <span class="sep" aria-hidden="true"></span>
+      <a class="cta" href="#contact"><span data-i18n="ctaHead">Me contacter</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a>
+      <button class="ctl menu-btn" type="button" id="menuBtn" aria-expanded="false" aria-controls="sheet" data-i18n-aria="menu" aria-label="Menu">
+        <span class="mtxt" data-i18n="menu">Menu</span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<div class="sheet" id="sheet" aria-hidden="true">
+  <nav data-i18n-aria="navLabel" aria-label="Navigation principale">
+    <a href="#projets"><b data-i18n="n1">Projets</b></a>
+    <a href="#apropos"><b data-i18n="n2">À propos</b></a>
+    <a href="#expertises"><b data-i18n="n3">Expertises</b></a>
+    <a href="#contact"><b data-i18n="n5">Contact</b></a>
+  </nav>
+  <div class="row">
+    <span class="sclock" id="sclock"></span>
+    <button class="ctl" type="button" data-mode-btn aria-label="Passer en mode clair">
+      <svg viewBox="0 0 24 24" aria-hidden="true">
+        <mask id="mm2"><rect x="-10" y="-10" width="44" height="44" fill="white"/><circle class="bite" r="6.5" cx="17" cy="7" fill="black"/></mask>
+        <circle class="orb" cx="12" cy="12" r="8" fill="currentColor" mask="url(#mm2)"/>
+        <g class="rays" stroke="currentColor" stroke-width="1.6" stroke-linecap="round"><line x1="12" y1="2" x2="12" y2="4"/><line x1="12" y1="20" x2="12" y2="22"/><line x1="2" y1="12" x2="4" y2="12"/><line x1="20" y1="12" x2="22" y2="12"/><line x1="4.9" y1="4.9" x2="6.3" y2="6.3"/><line x1="17.7" y1="17.7" x2="19.1" y2="19.1"/><line x1="4.9" y1="19.1" x2="6.3" y2="17.7"/><line x1="17.7" y1="6.3" x2="19.1" y2="4.9"/></g>
+      </svg>
+    </button>
+    <div class="seg" role="group" data-i18n-aria="langLabel" aria-label="Langue" data-lang="fr" data-lang-seg>
+      <span class="knob" aria-hidden="true"></span>
+      <button type="button" data-lang="fr" lang="fr" aria-pressed="true" aria-label="Français">FR</button>
+      <button type="button" data-lang="en" lang="en" aria-pressed="false" aria-label="English">EN</button>
+    </div>
+  </div>
+</div>
+
+<div class="toast" id="toast" role="status" hidden>
+  <p data-i18n="toast">Ce portfolio est aussi pensé pour mobile.</p>
+  <button class="see" type="button" id="seePhone" data-i18n="toastBtn">Voir sur iPhone 17 Pro</button>
+  <button class="x" type="button" id="toastX" data-i18n-aria="close" aria-label="Fermer">×</button>
+</div>
+
+<main id="contenu" tabindex="-1">
+  <div class="wrap">
+    <section class="hero" aria-labelledby="nm">
+      <div class="hero-l">
+        <p class="hero-k"><span data-i18n="role">UX/UI Designer</span></p>
+        <h1 class="name" id="nm" aria-label="Housna Baboorally"><span class="ln" aria-hidden="true">Housna</span><span class="ln" aria-hidden="true">Baboorally</span></h1>
+      </div>
+      <div class="hero-r">
+        <div class="lines" id="lines" aria-hidden="true"></div>
+        <p class="sr" id="linesSr"></p>
+        <a class="avail" href="#contact"><span class="star" aria-hidden="true"></span><span class="lbl"><span class="u" data-i18n="avail">Ouverte à un CDI dès janvier 2027</span></span><span class="go" aria-hidden="true"><svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></span></a>
+      </div>
+    </section>
+
+    <section class="block" id="projets" aria-labelledby="h-projets" style="padding-top:0">
+      <div class="sec-head">
+        <h2 id="h-projets"><span data-i18n="n1">Projets</span></h2>
+        <div class="car-ctrl">
+          <span class="count" id="count" aria-hidden="true">01 / 04</span>
+          <button class="arrow" type="button" id="prev" data-i18n-aria="prev" aria-label="Projet précédent"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="M10 3 5 8l5 5"/></svg></button>
+          <button class="arrow" type="button" id="next" data-i18n-aria="next" aria-label="Projet suivant"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4"><path d="m6 3 5 5-5 5"/></svg></button>
+        </div>
+      </div>
+      <div class="stage" id="stage" data-cursor="drag" role="region" aria-roledescription="carrousel" data-i18n-aria="carLabel" aria-label="Projets">
+        <div class="ring" id="ring">
+          <button class="pcard" type="button" data-i="0"><span class="ttl">Maison 123</span><span class="ph"><img src="assets/img/projets/maison-123.jpg" alt="" draggable="false"><span class="open"><span data-i18n="open">Voir le projet</span> <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></span></button>
+          <button class="pcard" type="button" data-i="1"><span class="ttl">ECCC</span><span class="ph"><img src="assets/img/projets/eccc.jpg" alt="" draggable="false"><span class="open"><span data-i18n="open">Voir le projet</span> <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></span></button>
+          <button class="pcard" type="button" data-i="2"><span class="ttl">Vrbal</span><span class="ph"><img src="assets/img/projets/vrbal.jpg" alt="" draggable="false"><span class="open"><span data-i18n="open">Voir le projet</span> <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></span></button>
+          <button class="pcard" type="button" data-i="3"><span class="ttl">Readz</span><span class="ph"><img src="assets/img/projets/readz.jpg" alt="" draggable="false"><span class="open"><span data-i18n="open">Voir le projet</span> <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></span></button>
+        </div>
+      </div>
+      <div class="pcap" id="pcap"><span class="role" id="prole"></span><div class="ptags" id="ptags"></div></div>
+      <p class="sr" id="carLive" aria-live="polite"></p>
+    </section>
+
+    <section class="block" id="apropos" aria-labelledby="h-apropos">
+      <div class="sec-head"><h2 id="h-apropos"><span data-i18n="n2">À propos</span></h2></div>
+      <div class="about">
+        <div>
+          <p class="big" data-i18n-html="aboutText">Je suis Housna, UX/UI designer basée à Paris. Ma démarche part des personnes qui utiliseront l'interface : comprendre leurs besoins, concevoir des parcours, puis les intégrer moi-même en code. <span class="dim">En dehors des écrans, j'essaie d'apprendre plein de choses, et j'ai une passion pour les anecdotes nulles. <a class="ask" href="#contact">Demandez-moi l’histoire d’Ubre Blanca.</a></span></p>
+          <ul class="timeline">
+            <li><div><b>Maison 123, Groupe Etam</b><small>Front-End UI Designer</small></div><span class="when">2026</span></li>
+            <li><div><b>Melon Rouge Agency</b><small>UX/UI Designer</small></div><span class="when">2024 – 2025</span></li>
+            <li><div><b data-i18n="minName">Ministère de l'Économie</b><small data-i18n="minRole">Designer de politique publique</small></div><span class="when">2023 – 2024</span></li>
+            <li><div><b>Strate École de Design</b><small data-i18n="strate">Diplôme de designer, filière interaction</small></div><span class="when">2021 – 2026</span></li>
+          </ul>
+        </div>
+        <figure class="portrait" id="portrait">
+          <img src="assets/img/portrait.png" data-i18n-alt="portraitAlt" alt="Portrait de Housna Baboorally, en train de rire, dessiné avec des mots">
+          <pre id="face" aria-hidden="true"></pre>
+        <span class="face-word" aria-hidden="true"></span></figure>
+      </div>
+    </section>
+
+    <section class="block" id="expertises" aria-labelledby="h-exp">
+      <div class="sec-head"><h2 id="h-exp"><span data-i18n="n3t">Ce que j'apporte</span></h2></div>
+      <div class="cards" data-cards>
+        <article class="card"><div class="fig" aria-hidden="true"><svg class="abs tilt" viewBox="18 4 84 72" id="absCircles"></svg></div><span class="label">UX Design</span><div><h3 data-i18n="c1h">Comprendre avant de concevoir.</h3><p data-i18n="c1p">Des parcours simples et intuitifs, nourris par l'écoute et les tests utilisateurs, pour répondre à de vrais besoins.</p></div></article>
+        <article class="card"><div class="fig" aria-hidden="true"><svg class="abs" viewBox="18 4 84 72" id="absCubes"></svg></div><span class="label">Design System</span><div><h3 data-i18n="c2h">Penser avant de construire.</h3><p data-i18n="c2p">Des bibliothèques de composants documentées, pour que l'équipe parle le même langage et que le produit évolue avec cohérence.</p></div></article>
+        <article class="card"><div class="fig" aria-hidden="true"><svg class="abs tilt" viewBox="18 4 84 72" id="absBento"></svg></div><span class="label">UI Design</span><div><h3 data-i18n="c3h">De Figma au code.</h3><p data-i18n="c3p">Des interfaces intégrées en HTML et CSS, pour passer du design au code sans perdre en fidélité.</p></div></article>
+        <article class="card"><div class="fig" aria-hidden="true"><svg class="abs" viewBox="18 4 84 72" id="absSphere"></svg></div><span class="label" data-i18n="c4l">Accessibilité</span><div><h3 data-i18n="c4h">Concevoir pour toutes et tous.</h3><p data-i18n="c4p">Des contrastes lisibles, des textes qui s'adaptent, une navigation au clavier : des produits pensés dès le départ pour être utilisables par toutes et tous.</p></div></article>
+      </div><div class="cdots" role="group" aria-label="Expertises" data-cdots><span class="cpill" aria-hidden="true"></span><button type="button" aria-label="1"></button><button type="button" aria-label="2"></button><button type="button" aria-label="3"></button><button type="button" aria-label="4"></button></div>
+    </section>
+
+    <section class="block" id="outils" aria-labelledby="h-outils">
+      <div class="sec-head">
+        <h2 id="h-outils"><span data-i18n="n4">Outils</span></h2>
+
+      </div>
+      <ul class="sr" data-i18n-aria="toolsLabel" aria-label="Outils utilisés">
+        <li>Figma</li><li>Adobe</li><li>Miro</li><li>HTML</li><li>CSS</li><li>JavaScript</li><li>VS Code</li><li>Salesforce</li><li>Contentstack</li><li>Algolia</li><li>Insider One</li><li>JustRelate</li><li>WinSCP</li><li>Notion</li><li>Claude</li><li>Microsoft Office</li>
+      </ul>
+      <div class="marquee" id="marquee" aria-hidden="true">
+        <div class="row" id="mrow"></div>
+      </div>
+    </section>
+
+    <section class="contact" id="contact" aria-labelledby="h-contact">
+            <h2 id="h-contact" data-i18n-html="contactH">Et si on travaillait<br><span class="dim">ensemble ?</span></h2>
+      <div class="links">
+        <a class="lk" id="mailLink" href="mailto:housna.baboorally@icloud.com"><span class="txt"><span class="lbl">Email</span><span class="val" id="mail">housna.baboorally@icloud.com</span></span><span class="act"><span class="actx" data-i18n="write">Écrire</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+        <a class="lk" href="https://www.linkedin.com/in/housnababoorally/" target="_blank" rel="noopener"><span class="txt"><span class="lbl" data-i18n="network">Réseau</span><span class="val">LinkedIn<span class="sr" data-i18n="newTab"> (nouvel onglet)</span></span></span><span class="act"><span class="actx" data-i18n="actOpen">Ouvrir</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></span></a>
+        <a class="lk" id="cvLink" href="cv/cv-housna-baboorally-fr-sombre.pdf" download><span class="txt"><span class="lbl" data-i18n="cvLbl">Parcours complet</span><span class="val" data-i18n="cv">Mon CV</span></span><span class="act"><span class="actx" data-i18n="actDl">Télécharger</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M8 2v9M4 7l4 4 4-4M3 14h10"/></svg></span></a>
+      </div>
+    </section>
+    <footer><span class="foot-copy">© 2026 Housna Baboorally</span><div class="foot-mid"><button class="foot-link" type="button" id="a11yBtn"><span data-i18n="a11yLink">Accessibilité et design system</span> <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></button><button class="foot-link" type="button" id="seePhone2"><span data-i18n="phoneLink">iPhone Duo</span> <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></button><button class="foot-link foot-legal" type="button" id="legalBtn" data-i18n="legalLink">Mentions légales</button></div><span class="foot-made" data-i18n="foot">Conçu sur Figma et développé à Paris</span><a class="foot-top" href="#top" data-i18n-aria="toTop" aria-label="Retour en haut"><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="M8 13V3M3.5 7.5 8 3l4.5 4.5"/></svg></a></footer>
+  </div>
+</main>
+
+<div class="case" id="case" role="dialog" aria-modal="true" aria-labelledby="caseTitle" hidden>
+  <div class="wrap">
+    <div class="head"><span class="label" id="caseNum">01 / 04</span><button type="button" class="btn" id="caseClose"><span data-i18n="close">Fermer</span> <span aria-hidden="true">✕︎</span></button></div>
+    <div id="caseCustom"></div>
+    <div id="caseGeneric">
+    <span class="label" id="caseKind"></span>
+    <h2 id="caseTitle"></h2>
+    <p class="lead" id="caseLead"></p>
+    <div class="meta" id="caseTags"></div>
+    <div class="cover" id="caseCover"></div>
+    <div class="part"><h3 data-i18n="p1">Contexte</h3><p data-i18n="p1t">Le client, le rôle, la durée, l'équipe.</p></div>
+    <div class="part"><h3 data-i18n="p2">Problème</h3><p data-i18n="p2t">Ce qui n'allait pas, ou l'objectif à atteindre.</p></div>
+    <div class="part"><h3 data-i18n="p3">Démarche</h3><p data-i18n="p3t">Recherche, parcours, wireframes, itérations.</p></div>
+    <div class="part"><h3 data-i18n="p4">Solution</h3><p data-i18n="p4t">Les maquettes finales, en grand.</p></div>
+    <div class="part"><h3 data-i18n="p5">Résultats</h3><p data-i18n="p5t">Chiffres, retours, enseignements.</p></div>
+    <p class="soon" data-i18n="soon">Les visuels détaillés de ce projet arrivent bientôt.</p>
+    </div>
+    <div class="nextp"><button type="button" class="cta ghost" id="caseNext" style="border:0;cursor:pointer"><span data-i18n="nextProj">Projet suivant</span><svg viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.5" aria-hidden="true"><path d="m6 3 5 5-5 5"/></svg></button></div>
+  </div>
+</div>
+
+<template id="tplVrbal">
+  <article class="vb">
+    <header class="fx-hero">
+      <span class="rz-kick" data-t="kick"></span>
+      <h2 class="fx-title" id="caseTitleV"><span class="fx-name"><img class="fx-logo" src="assets/img/vrbal/logo.png" alt="VRBAL"></span><span data-t="fxT"></span></h2>
+      <dl class="fx-pb"><div><dt data-t="fxNl"></dt><dd data-t="fxN"></dd></div><div><dt data-t="fxRl"></dt><dd data-t="fxR"></dd></div></dl>
+    </header>
+    <div class="vb-video fx-media vb-tv2" tabindex="0" data-hover-pause><video src="assets/video/vrbal-experience-vr.mp4" poster="assets/img/vrbal/experience-vr-poster.jpg" muted loop playsinline preload="metadata" data-auto></video><span class="vb-vlabel" data-t="vLabel"></span></div>
+    <dl class="m-meta">
+      <div><dt data-t="mRole"></dt><dd data-t="mRoleV"></dd></div>
+      <div><dt data-t="mCtx"></dt><dd data-t="mCtxV"></dd></div>
+      <div><dt data-t="mFmt"></dt><dd data-t="mFmtV"></dd></div>
+      <div><dt data-t="mFor"></dt><dd data-t="mForV"></dd></div>
+    </dl>
+
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">01</span><h3 data-sec="0"></h3><p data-t="c1"></p></div>
+      <div class="vb-persona">
+        <p class="vb-quote" data-t="persona"></p>
+        <ul class="vb-traits"><li data-t="tr1"></li><li data-t="tr2"></li><li data-t="tr3"></li></ul>
+      </div>
+    </section>
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">02</span><h3 data-sec="1"></h3><p data-t="c2"></p></div>
+      <ol class="vb-rules m-steps"><li><span>1</span><b data-t="dm1"></b></li><li><span>2</span><b data-t="dm3"></b></li></ol>
+    </section>
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">03</span><h3 data-sec="2"></h3></div>
+      <div class="sv" data-sv>
+        <div class="sv-media"><div class="vb-screen"><video src="assets/video/vrbal-experience-vr.mp4" muted playsinline preload="metadata" data-step-video aria-hidden="true"></video></div></div>
+        <div class="sv-side"><p class="sv-count" data-svc></p><ol class="sv-list"><li><button type="button" data-a="6" data-b="16"><span class="no">01</span><span class="sv-t"><b data-t="sc1"></b><span class="sv-p" data-t="sc1p"></span></span></button></li><li><button type="button" data-a="16" data-b="32"><span class="no">02</span><span class="sv-t"><b data-t="sc2"></b><span class="sv-p" data-t="sc2p"></span></span></button></li><li><button type="button" data-a="32" data-b="44"><span class="no">03</span><span class="sv-t"><b data-t="sc3"></b><span class="sv-p" data-t="sc3p"></span></span></button></li></ol><div class="ec-pnav"><button type="button" data-stp><svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13.5 8h-11M7 3.5 2.5 8 7 12.5"/></svg><span data-t="prevSt"></span></button><button type="button" data-stn><span data-t="nextSt"></span><svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></button></div></div>
+      </div>
+      <h4 class="m-sub" data-t="s3"></h4>
+      <div class="vb-map" data-map>
+        <img src="assets/img/vrbal/plan-magasin.jpg" alt="" data-alt="map" loading="lazy">
+        <div class="vb-lights" aria-hidden="true"><i style="left:5.77%;top:89.73%;animation-delay:0ms"></i><i style="left:5.77%;top:62.98%;animation-delay:137ms"></i><i style="left:5.77%;top:36.24%;animation-delay:274ms"></i><i style="left:5.77%;top:9.50%;animation-delay:411ms"></i><i style="left:10.71%;top:26.93%;animation-delay:548ms"></i><i style="left:22.67%;top:26.36%;animation-delay:685ms"></i><i style="left:33.79%;top:90.31%;animation-delay:822ms"></i><i style="left:33.79%;top:62.98%;animation-delay:959ms"></i><i style="left:35.27%;top:36.24%;animation-delay:1096ms"></i><i style="left:33.79%;top:8.92%;animation-delay:1233ms"></i><i style="left:63.30%;top:90.89%;animation-delay:1370ms"></i><i style="left:63.04%;top:63.57%;animation-delay:1507ms"></i><i style="left:63.04%;top:35.66%;animation-delay:1644ms"></i><i style="left:63.04%;top:8.33%;animation-delay:1781ms"></i><i style="left:70.22%;top:76.94%;animation-delay:18ms"></i><i style="left:92.96%;top:91.48%;animation-delay:155ms"></i><i style="left:92.96%;top:63.57%;animation-delay:292ms"></i><i style="left:92.96%;top:35.66%;animation-delay:429ms"></i><i style="left:92.96%;top:7.75%;animation-delay:566ms"></i></div>
+      </div>
+      <div class="vb-maptool"><div class="seg ptabs vb-seg" role="group" data-lang="fr" data-mapseg><span class="knob" aria-hidden="true"></span><button type="button" aria-pressed="true" data-m="calm" data-t="calm"></button><button type="button" aria-pressed="false" data-m="loud" data-t="loud"></button></div></div>
+      <h4 class="m-sub" data-t="s4"></h4>
+      <div class="vk" data-vk>
+        <div class="vk-stage">
+          <div class="vk-book">
+            <div class="vk-layer"><img class="vk-open on" alt="" data-vkimg="a" draggable="false"><img class="vk-open" alt="" data-vkimg="b" draggable="false"><img class="vk-letter" src="assets/img/vrbal/kit/lettre-mini.webp" alt="" draggable="false"><img class="vk-flapimg" alt="" data-vkflap draggable="false"></div>
+            <button type="button" class="vk-hot vk-h-letter" data-vkp="letter"><span class="vk-dot" aria-hidden="true"></span><span class="vk-tip" aria-hidden="true"></span></button><button type="button" class="vk-hot vk-h-fiche" data-vkp="fiche"><span class="vk-dot" aria-hidden="true"></span><span class="vk-tip" aria-hidden="true"></span></button><button type="button" class="vk-hot vk-h-g" data-vkp="g"><span class="vk-dot" aria-hidden="true"></span><span class="vk-tip" aria-hidden="true"></span></button><button type="button" class="vk-hot vk-h-y" data-vkp="y"><span class="vk-dot" aria-hidden="true"></span><span class="vk-tip" aria-hidden="true"></span></button><button type="button" class="vk-hot vk-h-p" data-vkp="p"><span class="vk-dot" aria-hidden="true"></span><span class="vk-tip" aria-hidden="true"></span></button>
+            <div class="vk-cover" aria-hidden="true"><div class="vk-face vk-front"><img src="assets/img/vrbal/kit/couverture.webp" alt="" draggable="false"></div><div class="vk-face vk-bk"><img alt="" data-vkback draggable="false"></div></div>
+          </div>
+          <button type="button" class="vk-cta" data-vkopen></button>
+        </div>
+        <div class="vk-panel" data-vkpanel aria-live="polite"></div>
+      </div>
+    </section>
+    
+  </article>
+</template>
+<template id="tplEccc">
+  <article class="ec">
+    <header class="fx-hero">
+      <span class="rz-kick" data-t="kick"></span>
+      <h2 class="fx-title" id="caseTitleE"><span class="fx-name"><img class="fx-logo fx-logo-mr" src="assets/img/eccc/logo-melon-rouge.png" alt="Melon Rouge Agency"></span><span data-t="fxT"></span></h2>
+      <dl class="fx-pb"><div><dt data-t="fxNl"></dt><dd data-t="fxN"></dd></div><div><dt data-t="fxRl"></dt><dd data-t="fxR"></dd></div></dl>
+    </header>
+    <figure class="ec-cover fx-cover"><img src="assets/img/eccc/photo-trace.jpg" alt="" data-alt="cover"></figure>
+    <dl class="m-meta">
+      <div><dt data-t="mRole"></dt><dd data-t="mRoleV"></dd></div>
+      <div><dt data-t="mWith"></dt><dd data-t="mWithV"></dd></div>
+      <div><dt data-t="mDir"></dt><dd>Melon Rouge Agency</dd></div>
+      <div><dt data-t="mOpen"></dt><dd data-t="mOpenV"></dd></div>
+    </dl>
+
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">01</span><h3 data-sec="0"></h3><p data-t="c1"></p></div>
+      <ol class="ec-pillars ec-pill3"><li><div><b data-t="p1"></b><span data-t="p1t"></span></div></li><li><div><b data-t="p2"></b><span data-t="p2t"></span></div></li><li><div><b data-t="p3"></b><span data-t="p3t"></span></div></li></ol>
+    </section>
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">02</span><h3 data-sec="1"></h3><p data-t="c2"></p></div>
+      <h4 class="m-sub" data-t="mob"></h4>
+      <div class="ec-two"><div class="ec-stat"><span class="n" data-count="44">44</span><p data-t="statT"></p></div><div class="ec-grid3" data-desk><figure class="ec-tile"><div class="ec-still"><img src="assets/img/eccc/carnet-structure.jpg" alt="" data-alt="m1" loading="lazy"></div><figcaption><b data-t="m1"></b></figcaption></figure><figure class="ec-tile"><div class="ec-still"><img src="assets/img/eccc/carnet-clics.jpg" alt="" data-alt="m2" loading="lazy"></div><figcaption><b data-t="m2"></b></figcaption></figure><figure class="ec-tile"><div class="ec-still"><img src="assets/img/eccc/carnet-ecrans.jpg" alt="" data-alt="m5" loading="lazy"></div><figcaption><b data-t="m5"></b></figcaption></figure></div></div>
+      <h4 class="m-sub" data-t="k"></h4>
+      <div class="ec-grid3 ec-pad"><figure class="ec-tile"><div class="ec-still"><img src="assets/img/eccc/carnet-audience.jpg" alt="" data-alt="kA" loading="lazy"></div><figcaption><b data-t="kA"></b></figcaption></figure><figure class="ec-tile"><div class="ec-still"><img src="assets/img/eccc/carnet-parcours.jpg" alt="" data-alt="kB" loading="lazy"></div><figcaption><b data-t="kB"></b></figcaption></figure><figure class="ec-tile"><div class="ec-still"><img src="assets/img/eccc/carnet-organisation.jpg" alt="" data-alt="kC" loading="lazy"></div><figcaption><b data-t="kC"></b></figcaption></figure></div>
+    </section>
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">03</span><h3 data-sec="2"></h3></div>
+      <div class="ec-plan">
+        <p class="ec-hint"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M9 11V5.5a1.5 1.5 0 0 1 3 0V10m0-.5a1.5 1.5 0 0 1 3 0V11m0-.5a1.5 1.5 0 0 1 3 0V15a6 6 0 0 1-6 6h-1a6 6 0 0 1-4.8-2.4L4 15.5a1.6 1.6 0 0 1 2.5-2L9 16"/></svg><span data-t="hint"></span><span class="ec-count" data-stcount></span></p>
+          <div class="ec-mapbox" role="group" data-aria="plan"><div class="ec-mapin"><span class="ec-tip" data-tip aria-hidden="true"></span>
+<svg viewBox="0 0 1000 360" aria-hidden="true" focusable="false"><polyline class="w" points="218.0,345.0 30.0,345.0 30.0,15.0 970.0,15.0 970.0,345.0 310.7,345.0"/><line class="w" x1="890.6" y1="15.0" x2="965.6" y2="15.0" style="stroke:var(--surface);stroke-width:5;opacity:1"/><line class="w" x1="500.4" y1="15.0" x2="500.4" y2="142.3"/><line class="w" x1="497.8" y1="222.4" x2="497.8" y2="345.0"/><line class="w" x1="811.1" y1="36.7" x2="811.1" y2="151.7"/><line class="w" x1="806.7" y1="229.0" x2="806.7" y2="345.0"/><path class="arc" d="M192.4,147.0 A77.7,77.7 0 0 0 347.7,147.0"/><path class="w" style="stroke-width:2" d="M244.5,140.4 V172.5 Q270.1,202.6 295.7,172.5 V140.4"/></svg>
+<button type="button" class="ec-st" data-st="S2DEFG" style="left:26.75%;top:6.26%">S2-DEFG</button>
+<button type="button" class="ec-st v d" data-st="S2C" style="left:5.2%;top:12%">S2-C</button>
+<button type="button" class="ec-st" data-st="S2D" style="left:14%;top:21%">S2-D</button>
+<button type="button" class="ec-st" data-st="S2E" style="left:22.5%;top:21%">S2-E</button>
+<button type="button" class="ec-st" data-st="S2F" style="left:31%;top:21%">S2-F</button>
+<button type="button" class="ec-st" data-st="S2G" style="left:39.5%;top:21%">S2-G</button>
+<button type="button" class="ec-st v" data-st="S2H" style="left:48.1%;top:17.26%">S2-H</button>
+<button type="button" class="ec-st v" data-st="S2C2" style="left:5.2%;top:36.5%">S2-C</button>
+<button type="button" class="ec-st d a" data-st="S2A" style="left:27.01%;top:42.93%">S2-A</button>
+<button type="button" class="ec-st v a" data-st="S2B" style="left:5.2%;top:61%">S2-B</button>
+<button type="button" class="ec-st" data-st="S1A" style="left:27.01%;top:68.07%">S1-A</button>
+<button type="button" class="ec-st v" data-st="S1E" style="left:5.2%;top:83.5%">S1-E</button>
+<button type="button" class="ec-st" data-st="S1D" style="left:12.8%;top:84%">S1-D</button>
+<button type="button" class="ec-st" data-st="S1C" style="left:21.4%;top:84%">S1-C</button>
+<button type="button" class="ec-st v" data-st="S1B" style="left:48.1%;top:82.74%">S1-B</button>
+<button type="button" class="ec-st" data-st="S3B" style="left:65.3%;top:14.12%">S3-B</button>
+<button type="button" class="ec-st v d" data-st="S3D" style="left:78.3%;top:22%">S3-D</button>
+<button type="button" class="ec-st v" data-st="S4D" style="left:83.4%;top:22%">S4-D</button>
+<button type="button" class="ec-st a" data-st="S3A" style="left:65.3%;top:52.62%">S3-A</button>
+<button type="button" class="ec-st v d" data-st="S3E" style="left:78.3%;top:78.81%">S3-E</button>
+<button type="button" class="ec-st" data-st="S3C" style="left:65.3%;top:88.76%">S3-C</button>
+<button type="button" class="ec-st v" data-st="S4C" style="left:94.7%;top:33%">S4-C</button>
+<button type="button" class="ec-st v" data-st="S4A" style="left:94.7%;top:61%">S4-A</button>
+<button type="button" class="ec-st d" data-st="S4B" style="left:89.32%;top:91.12%">S4-B</button>
+          </div></div>
+          <p class="ec-legend"><span><i></i><span data-t="lgD"></span></span><span><em aria-hidden="true"></em><span data-t="lgA"></span></span></p>
+        <div class="ec-panel" aria-live="polite">
+          <div class="ec-shot"><img alt="" data-shot><div class="ec-dots" data-dots></div></div>
+          <div class="ec-pinfo">
+            <span class="code" data-code></span><h4 data-name style="margin:0"></h4><div class="ec-ptags" data-ptags style="margin:0"></div><div class="seg ptabs ec-seg" role="group" data-lang="fr" data-view hidden><span class="knob" aria-hidden="true"></span><button type="button" aria-pressed="true" data-v="r" data-t="vR"></button><button type="button" aria-pressed="false" data-v="p" data-t="vP"></button></div><div class="ec-pnav"><button type="button" data-stp><svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13.5 8h-11M7 3.5 2.5 8 7 12.5"/></svg><span data-t="prevSt"></span></button><button type="button" data-stn><span data-t="nextSt"></span><svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></button></div>
+            
+          </div>
+        </div>
+      </div>
+      <h4 class="m-sub">My Story</h4>
+      <div class="ec-story">
+        <div class="ec-video"><video controls playsinline preload="metadata" poster="assets/img/eccc/my-story-poster.jpg" data-story>
+          <source src="assets/video/eccc-my-story.mp4" type="video/mp4">
+          <track kind="subtitles" srclang="fr" label="Français" data-vtt="fr">
+          <track kind="subtitles" srclang="en" label="English" data-vtt="en">
+        </video></div>
+        <p class="ec-note"><span data-t="cw"></span></p>
+      </div>
+
+    </section>
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">04</span><h3 data-sec="3"></h3><p data-t="c4"></p></div>
+      <div class="ec-gal4"><figure><div class="g4i"><img src="assets/img/eccc/photo-story.jpg" alt="" data-alt="story" loading="lazy"></div><figcaption data-t="cStory"></figcaption></figure><figure><div class="g4i"><img src="assets/img/eccc/photo-carte.jpg" alt="" data-alt="carte" loading="lazy"></div><figcaption data-t="cCarte"></figcaption></figure><figure><div class="g4i"><img src="assets/img/eccc/photo-borne.jpg" alt="" data-alt="borne" loading="lazy"></div><figcaption data-t="cBorne"></figcaption></figure><figure><div class="g4i"><img src="assets/img/eccc/photo-archives.jpg" alt="" data-alt="archives" loading="lazy"></div><figcaption data-t="cArch"></figcaption></figure></div>
+      <div class="ec-end"><span data-t="credit"></span><a href="https://www.eccc.gov.kh/fr" target="_blank" rel="noopener" data-site><span data-t="site"></span> <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a><a href="https://www.google.com/maps/place/Chambres+extraordinaires+au+sein+des+tribunaux+cambodgiens/@11.5702614,104.9115204,15z/data=!4m6!3m5!1s0x31094f73fefdc209:0xdae586bf14f598d3!8m2!3d11.5702614!4d104.9115204" target="_blank" rel="noopener" data-map><span data-t="map"></span> <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></div>
+    </section>
+    <dialog class="ec-lb" data-lbox aria-label=""><div class="bar"><span data-lbn></span><button type="button" data-lbx></button></div><div class="stage"><img alt="" data-lbimg></div><div class="foot"><button type="button" data-lbp aria-label=""><svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13.5 8h-11M7 3.5 2.5 8 7 12.5"/></svg></button><p data-lbc></p><button type="button" data-lbnx aria-label=""><svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></button></div></dialog>
+  </article>
+</template>
+<template id="tplReadz">
+  <article class="rz">
+    <header class="fx-hero">
+      <span class="rz-kick" data-t="kick"></span>
+      <h2 class="fx-title" id="caseTitleR"><span class="fx-name"><img class="fx-logo fx-logo-rz" src="assets/img/readz/logo.png" alt="Readz"></span><span data-t="fxT"></span></h2>
+      <dl class="fx-pb"><div><dt data-t="fxNl"></dt><dd data-t="fxN"></dd></div><div><dt data-t="fxRl"></dt><dd data-t="fxR"></dd></div></dl>
+    </header>
+    <div class="fx-media fx-phonebox"><div class="rz-phone" tabindex="0" data-hover-pause><video src="assets/video/readz-parcours.mp4" poster="assets/img/readz/parcours-poster.jpg" muted loop playsinline preload="metadata" data-auto aria-label="" data-alt="vHero"></video></div></div>
+    <dl class="m-meta rz-meta">
+      <div><dt data-t="mRole"></dt><dd data-t="mRoleV"></dd></div>
+      <div><dt data-t="mType"></dt><dd data-t="mTypeV"></dd></div>
+      <div><dt data-t="mTime"></dt><dd data-t="mTimeV"></dd></div>
+      <div><dt data-t="mDel"></dt><dd data-t="mDelV"></dd></div>
+    </dl>
+
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">01</span><h3 data-sec="0"></h3><p data-t="c1"></p></div>
+      <div class="rz-name rz-eq">
+        <div class="rz-term"><span class="rz-big">Read</span><p data-t="read"></p></div>
+        <span class="rz-op" aria-hidden="true">+</span>
+        <div class="rz-term"><span class="rz-big rz-serif">Rizz</span><p data-t="rizz"></p></div>
+        <span class="rz-op" aria-hidden="true">=</span>
+        <div class="rz-term rz-res"><img class="rz-eqlogo" src="assets/img/readz/logo.png" alt="Readz"><p data-t="eqR"></p></div>
+      </div>
+    </section>
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">02</span><h3 data-sec="1"></h3><p data-t="c2"></p></div>
+      <ul class="rz-picks">
+        <li><b data-t="p1"></b><span data-t="p1p"></span></li>
+        <li><b data-t="p2"></b><span data-t="p2p"></span></li>
+        <li><b data-t="p3"></b><span data-t="p3p"></span></li>
+      </ul>
+    </section>
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">03</span><h3 data-sec="2"></h3><p data-t="c3"></p></div>
+      <div class="sv sv-ph" data-sv>
+        <div class="sv-media"><div class="rz-phone"><video muted playsinline preload="metadata" data-step-video aria-hidden="true"></video></div></div>
+        <div class="sv-side"><p class="sv-count" data-svc></p><ol class="sv-list"><li><button type="button" data-a="9" data-b="40" data-v="ecriture"><span class="no">01</span><span class="sv-t"><b data-t="st1"></b><span class="sv-p" data-t="st1p"></span></span></button></li><li><button type="button" data-a="0" data-b="9" data-v="parcours"><span class="no">02</span><span class="sv-t"><b data-t="st2"></b><span class="sv-p" data-t="st2p"></span></span></button></li><li><button type="button" data-a="9" data-b="21" data-v="parcours"><span class="no">03</span><span class="sv-t"><b data-t="st3"></b><span class="sv-p" data-t="st3p"></span></span></button></li><li><button type="button" data-a="31" data-b="42.5" data-v="parcours"><span class="no">04</span><span class="sv-t"><b data-t="st4"></b><span class="sv-p" data-t="st4p"></span></span></button></li></ol><div class="ec-pnav"><button type="button" data-stp><svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M13.5 8h-11M7 3.5 2.5 8 7 12.5"/></svg><span data-t="prevSt"></span></button><button type="button" data-stn><span data-t="nextSt"></span><svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M2.5 8h11M9 3.5 13.5 8 9 12.5"/></svg></button></div></div>
+      </div>
+      <h4 class="m-sub" data-t="s4"></h4>
+      <div class="rz-strip" data-strip tabindex="0" data-cursor="drag" role="region" data-arial="stripL"><img src="assets/img/readz/ecrans.jpg" alt="" data-alt="screens" draggable="false"></div>
+      <h4 class="m-sub" data-t="s5"></h4>
+      <div class="rz-ds">
+        <div class="rz-pal">
+          <div class="rz-swatches" role="list" data-sw></div>
+          <p class="rz-swl" aria-live="polite"><b data-swn></b><span data-swh></span></p>
+        </div>
+        <img class="rz-icon" src="assets/img/readz/icone-app.png" alt="" data-alt="icon">
+      </div>
+      <figure class="rz-fig"><img src="assets/img/readz/ui-kit.jpg" alt="" data-alt="uikit" loading="lazy"><figcaption data-t="kitc"></figcaption></figure>
+    </section>
+    <section class="m-sec rz-end">
+      <img class="rz-store" src="assets/img/readz/app-store.webp" alt="" data-alt="store" loading="lazy">
+      <div><span class="m-n">04</span><h3 data-sec="3"></h3><p data-t="c4"></p>
+      <p class="rz-note" data-t="s6n"></p></div>
+    </section>
+  </article>
+</template>
+<template id="tplM123">
+  <article class="mk">
+    <header class="fx-hero">
+      <span class="rz-kick" data-t="kick"></span>
+      <h2 class="fx-title" id="caseTitleM"><span class="fx-name"><img class="fx-logo fx-logo-m" src="assets/img/maison-123/logo.png" alt="Maison 123"></span><span data-t="fxT"></span></h2>
+      <dl class="fx-pb"><div><dt data-t="fxNl"></dt><dd data-t="fxN"></dd></div><div><dt data-t="fxRl"></dt><dd data-t="fxR"></dd></div></dl>
+    </header>
+    <figure class="fx-media fx-shot fx-hasnote"><img src="assets/img/maison-123/couverture.jpg" alt="" data-alt="cover"></figure>
+    <p class="fx-note" data-t="rights"></p>
+    <dl class="m-meta"><div><dt></dt><dd></dd></div></dl>
+
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">01</span><h3 data-sec="0"></h3><p data-t="c1"></p></div>
+      <dl class="kpis"><div><dt>5</dt><dd data-t="k1"></dd></div><div><dt>8</dt><dd data-t="k2"></dd></div></dl>
+    </section>
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">02</span><h3 data-sec="1"></h3><p data-t="c2"></p></div>
+      <ol class="vb-rules m-steps"><li><span>1</span><b data-t="dm1"></b></li><li><span>2</span><b data-t="dm2"></b></li><li><span>3</span><b data-t="dm3"></b></li></ol>
+    </section>
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">03</span><h3 data-sec="2"></h3><p data-t="c3"></p></div>
+      <div class="mk-body">
+        <div class="mk-tabs" role="tablist" data-tabs>
+          <button type="button" role="tab" data-k="countryside"><b>The Escape</b><span data-t="lb1c"></span></button>
+          <button type="button" role="tab" data-k="london"><b>Hello London</b><span data-t="lb2c"></span></button>
+          <button type="button" role="tab" data-k="cottage"><b>The Escape</b><span data-t="lb3c"></span></button>
+          <button type="button" role="tab" data-k="cliffs"><b>The Escape</b><span data-t="lb4c"></span></button>
+        </div>
+        <div class="mk-duo" data-duo="lb">
+          <div class="mk-browser"><span class="mk-dots" aria-hidden="true"><i></i><i></i><i></i></span><div class="mk-scr" tabindex="0" data-scr><img alt="" data-img="desktop"></div></div>
+          <div class="mk-phone"><div class="mk-scr" tabindex="0" data-scr><img alt="" data-img="mobile"></div></div>
+        </div>
+        <p class="mk-rights" data-t="rights"></p><div class="mk-foot"><p class="mk-hint" data-t="hint"></p><a class="mk-link" target="_blank" rel="noopener" data-online><span data-t="see"></span> <svg class="ico" viewBox="0 0 16 16" fill="none" stroke="currentColor" stroke-width="1.4" aria-hidden="true"><path d="M4 12 12 4M5.5 4H12v6.5"/></svg></a></div>
+      </div>
+      <h4 class="m-sub" data-t="s2"></h4>
+      <div class="mk-body"><div class="mk-duo" data-duo="noel">
+          <div class="mk-browser"><span class="mk-dots" aria-hidden="true"><i></i><i></i><i></i></span><div class="mk-scr" tabindex="0" data-scr><img alt="" data-img="desktop"></div></div>
+          <div class="mk-phone"><div class="mk-scr" tabindex="0" data-scr><img alt="" data-img="mobile"></div></div>
+        </div></div>
+    </section>
+    <section class="m-sec">
+      <div class="m-head"><span class="m-n">04</span><h3 data-sec="3"></h3><p data-t="c4"></p></div>
+      <ul class="mk-list">
+        <li><b data-t="d1"></b><p data-t="d1p"></p></li>
+        <li><b data-t="d2"></b><p data-t="d2p"></p></li>
+        <li><b data-t="d3"></b><p data-t="d3p"></p></li>
+      </ul>
+    </section>
+  </article>
+</template>
+
+<div class="a11y-scrim" id="a11yScrim" aria-hidden="true"></div>
+<div class="case a11y" id="a11y" role="dialog" aria-modal="true" aria-labelledby="a11yTitle" hidden>
+  <div class="wrap">
+    <div class="head"><span class="label"></span><button type="button" class="btn" id="a11yClose"><span data-i18n="close">Fermer</span> <span aria-hidden="true">✕︎</span></button></div>
+    <div id="a11yBody"></div>
+  </div>
+</div>
+
+<dialog class="legal" id="legal" aria-labelledby="legalT"><div class="lg-in"><div class="lg-head"><h2 id="legalT"></h2><button type="button" class="btn" id="legalX"></button></div><div id="legalBody"></div></div></dialog>
+<div class="device" id="device" role="dialog" aria-modal="true" data-i18n-aria="deviceLabel" aria-label="Aperçu sur iPhone Duo" hidden>
+  <div class="dbar">
+    <div class="seg" role="group" data-i18n-aria="foldLbl" aria-label="Position de l'iPhone Duo" data-lang="fr" id="foldSeg">
+      <span class="knob" aria-hidden="true"></span>
+      <button type="button" data-f="closed" aria-pressed="true" data-i18n="closed">Fermé</button>
+      <button type="button" data-f="open" aria-pressed="false" data-i18n="opened">Ouvert</button>
+    </div>
+  </div>
+  <button class="close-d" type="button" id="deviceClose" data-i18n="close">Fermer</button>
+  <div class="phone" id="phone"><div class="screen"><div class="island"></div><div class="crease"></div><iframe id="phoneFrame" name="hb-embed" title="Portfolio sur iPhone Duo" loading="lazy"></iframe></div></div>
+  <p class="cap" id="devCap"></p>
+</div>
+<script src="js/main.js"></script>
+</body>
+</html>
