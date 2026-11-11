@@ -12,7 +12,7 @@ const store = { get(k) { try { return localStorage.getItem(k); } catch (e) { ret
 const T = {
   fr: { n3t: "Ce que j'apporte", continueTour: "Continuer la visite",
     skip: "Aller au contenu", home: "Housna Baboorally, retour en haut de page", navLabel: "Navigation principale", langLabel: "Langue", menu: "Menu", close: "Fermer",
-    legalLink: "Mentions légales", toTop: "Retour en haut", n1: "Projets", n2: "À propos", n3: "Expertises", n4: "Outils", n5: "Contact", ctaHead: "Me contacter",
+    legalLink: "Mentions légales", ctAvail: "Disponible en janvier", sigReplay: "Rejouer la signature", toTop: "Retour en haut", n1: "Projets", n2: "À propos", n3: "Expertises", n4: "Outils", n5: "Contact", ctaHead: "Me contacter",
     toast: "Ce portfolio est aussi pensé pour mobile.", toastBtn: "Voir sur iPhone Duo", demoLbl: "Style des boutons", sharp: "Net", soft: "Doux", foldLbl: "Position de l'iPhone Duo", closed: "Fermé", opened: "Ouvert",
     role: "UX/UI Designer",
     statement: 'Je conçois des interfaces <span class="rot" aria-hidden="true"><span>claires</span><span>accessibles</span><span>intuitives</span><span>sur mesure</span></span><span class="sr">claires, accessibles et intuitives</span>, <span class="dim">de la recherche utilisateur jusqu\'à la mise en ligne.</span>',
@@ -20,7 +20,7 @@ const T = {
     seeProjects: "Voir les projets", badge: "CDI", avail: "Ouverte à un CDI dès janvier 2027",
     lines: ["Je conçois des parcours UX à partir de la recherche utilisateur.", "Je dessine l'UI dans Figma, puis je l'intègre en HTML et CSS.", "Design system, responsive et accessibilité, jusqu'à la mise en ligne."], mobileLink: "Voir la version iPhone Duo", cDrag: "Glisser", cView: "Voir",
     prev: "Projet précédent", next: "Projet suivant", carLabel: "Projets", open: "Voir le projet",
-    aboutText: 'Je suis Housna, UX/UI designer basée à Paris. Ma démarche part des personnes qui utiliseront l\'interface : comprendre leurs besoins, concevoir des parcours, puis les intégrer moi-même en code. <span class="dim">En dehors des écrans, j\'essaie d\'apprendre plein de choses, et j\'ai une passion pour les anecdotes nulles. <a class="ask" href="#contact">Demandez-moi l’histoire d’Ubre Blanca.</a></span>',
+    aboutText: 'Je suis Housna, UX/UI designer basée à Paris. Ma démarche part des personnes qui utiliseront l\'interface : comprendre leurs besoins, concevoir des parcours, puis les intégrer en code. <span class="dim">En dehors des écrans, j\'essaie d\'apprendre plein de choses, et j\'ai une passion pour les anecdotes nulles. <a class="ask" href="#contact">Demandez-moi l’histoire d’Ubre Blanca.</a></span>',
     minName: "Ministère de l'Économie", minRole: "Designer de politique publique", strate: "Diplôme de designer, filière interaction",
     portraitAlt: "Portrait de Housna Baboorally, en train de rire, dessiné avec des mots",
     c1h: "Comprendre avant de concevoir.", c1p: "Des parcours simples et intuitifs, nourris par l'écoute et les tests utilisateurs, pour répondre à de vrais besoins.",
@@ -37,7 +37,7 @@ const T = {
   en: {
  n3t: "What I bring", continueTour: "Continue the tour",
     skip: "Skip to content", home: "Housna Baboorally, back to top", navLabel: "Main navigation", langLabel: "Language", menu: "Menu", close: "Close",
-    legalLink: "Legal notice", toTop: "Back to top", n1: "Projects", n2: "About", n3: "Expertise", n4: "Tools", n5: "Contact", ctaHead: "Get in touch",
+    legalLink: "Legal notice", ctAvail: "Available from January", sigReplay: "Replay the signature", toTop: "Back to top", n1: "Projects", n2: "About", n3: "Expertise", n4: "Tools", n5: "Contact", ctaHead: "Get in touch",
     toast: "This portfolio is also designed for mobile.", toastBtn: "View on iPhone Duo", demoLbl: "Button style", sharp: "Sharp", soft: "Soft", foldLbl: "iPhone Duo position", closed: "Folded", opened: "Unfolded",
     role: "UX/UI Designer",
     statement: 'I design <span class="rot" aria-hidden="true"><span>clear</span><span>accessible</span><span>intuitive</span><span>tailored</span></span><span class="sr">clear, accessible and intuitive</span> interfaces, <span class="dim">from user research all the way to launch.</span>',
@@ -45,7 +45,7 @@ const T = {
     seeProjects: "See projects", badge: "Full-time", avail: "Open to a permanent role from January 2027",
     lines: ["I shape UX journeys grounded in user research.", "I design the UI in Figma, then build it in HTML and CSS.", "Design systems, responsive and accessibility, all the way to launch."], mobileLink: "View the iPhone Duo version", cDrag: "Drag", cView: "View",
     prev: "Previous project", next: "Next project", carLabel: "Projects", open: "View project",
-    aboutText: 'I\'m Housna, a UX/UI designer based in Paris. My work starts with the people who will use the interface: understanding their needs, designing journeys, then building them in code myself. <span class="dim">Away from screens, I try to learn all sorts of things, and I have a soft spot for useless trivia. <a class="ask" href="#contact">Ask me for the story of Ubre Blanca.</a></span>',
+    aboutText: 'I\'m Housna, a UX/UI designer based in Paris. My work starts with the people who will use the interface: understanding their needs, designing journeys, then building them in code. <span class="dim">Away from screens, I try to learn all sorts of things, and I have a soft spot for useless trivia. <a class="ask" href="#contact">Ask me for the story of Ubre Blanca.</a></span>',
     minName: "French Ministry of the Economy", minRole: "Public policy designer", strate: "Design degree, interaction track",
     portraitAlt: "Portrait of Housna Baboorally laughing, drawn with words",
     c1h: "Understand before designing.", c1p: "Simple, intuitive journeys shaped by listening and user testing, to meet real needs.",
@@ -487,7 +487,7 @@ device.addEventListener("click", e => { if (e.target === device) closeDevice(); 
 device.addEventListener("keydown", e => { if (e.key === "Escape") closeDevice(); trap(device, e); });
 addEventListener("resize", fitPhone);
 $("#seePhone2").addEventListener("click", openDevice);
-{ const tt = $(".foot-top"); if (tt) tt.addEventListener("click", e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); }); }
+{ const tt = $(".ct-up"); if (tt) tt.addEventListener("click", e => { e.preventDefault(); window.scrollTo({ top: 0, behavior: reduce ? "auto" : "smooth" }); }); }
 
 (() => {
   const fig = $("#portrait"), pre = $("#face"), img = fig.querySelector("img"), wordEl = fig.querySelector(".face-word");
@@ -629,34 +629,15 @@ $("#seePhone2").addEventListener("click", openDevice);
 $$(".card").forEach(c => c.addEventListener("pointermove", e => { const r = c.getBoundingClientRect(); c.style.setProperty("--mx", (e.clientX - r.left) + "px"); c.style.setProperty("--my", (e.clientY - r.top) + "px"); }));
 
 (() => {
-  if (EMBED || reduce || !matchMedia("(hover: hover) and (pointer: fine)").matches) return;
-  const cur = $("#cur"), dot = cur.querySelector(".cur-dot"), ring = cur.querySelector(".cur-ring"), lbl = cur.querySelector(".cur-lbl");
-  let x = -100, y = -100, rx = -100, ry = -100, down = 1, shown = false;
+  if (EMBED || !matchMedia("(hover: hover) and (pointer: fine)").matches) return;
+  const cur = $("#cur"); let on = false; root.classList.add("cur-on");
+  const set = v => { if (v !== on) { on = v; cur.classList.toggle("on", v); root.classList.toggle("cur-pill", v); } };
   addEventListener("pointermove", e => {
-    if (e.pointerType !== "mouse") return;
-    x = e.clientX; y = e.clientY;
-    if (!shown) { rx = x; ry = y; shown = true; cur.classList.remove("hide"); }
-    const t = e.target;
-    const zone = t.closest && t.closest("[data-cursor]");
-    const card = t.closest && t.closest(".pcard");
-    let label = "";
-    if (card && card.classList.contains("active")) label = T[lang].cView;
-    else if (zone && zone.dataset.cursor === "drag") label = T[lang].cDrag;
-    else if (zone && zone.dataset.cursor === "view") label = T[lang].cView;
-    const link = t.closest && t.closest("a, button, [role=button], label, select");
-    cur.classList.toggle("label", !!label);
-    cur.classList.toggle("link", !label && !!link);
-    if (label) lbl.textContent = label;
+    const card = e.pointerType === "mouse" && e.target.closest && e.target.closest(".pcard.active");
+    if (card) { cur.textContent = T[lang].cView + " ↗"; cur.style.translate = `${e.clientX}px ${e.clientY}px`; }
+    set(!!card);
   }, { passive: true });
-  addEventListener("pointerdown", () => { down = .82; });
-  addEventListener("pointerup", () => { down = 1; });
-  document.documentElement.addEventListener("mouseleave", () => { cur.classList.add("hide"); shown = false; });
-  (function loop() {
-    rx += (x - rx) * .16; ry += (y - ry) * .16;
-    dot.style.transform = `translate(${x}px, ${y}px)`;
-    ring.style.transform = `translate(${rx}px, ${ry}px) scale(${down})`;
-    requestAnimationFrame(loop);
-  })();
+  document.documentElement.addEventListener("mouseleave", () => set(false));
 })();
 
 const tickClock = () => { const t = new Intl.DateTimeFormat(lang === "fr" ? "fr-FR" : "en-GB", { hour: "2-digit", minute: "2-digit", timeZone: "Europe/Paris" }).format(new Date()); $("#hclock").textContent = "Paris " + t; $("#sclock").textContent = "Paris " + t; };
@@ -1310,22 +1291,9 @@ spy();
 pauseLabel();
 
 (() => {
-  const h2 = document.getElementById("h-contact"); if (!h2) return;
-  let busy = false;
-  const split = () => {
-    busy = true;
-    const tmp = document.createElement("div"), label = [];
-    h2.innerHTML = h2.innerHTML.split(/<br\s*\/?>/i).map(p => { tmp.innerHTML = p; const dim = !!tmp.querySelector(".dim"); const txt = tmp.textContent; label.push(txt);
-      return `<span class="ln${dim ? " dim" : ""}" aria-hidden="true">${txt.split(" ").map(w => `<span class="w">${[...w].map(c => `<span class="ch">${c}</span>`).join("")}</span>`).join(" ")}</span>`; }).join("");
-    h2.setAttribute("aria-label", label.join(" "));
-    busy = false;
-  };
-  split();
-  new MutationObserver(() => { if (!busy && !h2.querySelector(".ch")) split(); }).observe(h2, { childList: true });
-  const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { h2.classList.add("in"); io.disconnect(); } }), { threshold: .3 });
-  io.observe(h2);
-  if (matchMedia("(hover: hover)").matches && !reduce) {
-    h2.addEventListener("pointermove", e => h2.querySelectorAll(".ch").forEach(c => { const r = c.getBoundingClientRect(); const d = Math.abs(e.clientX - (r.left + r.width / 2)) + Math.abs(e.clientY - (r.top + r.height / 2)) * .6; c.style.setProperty("--lift", (Math.max(0, 1 - d / 140) * -10).toFixed(1) + "px"); }));
-    h2.addEventListener("pointerleave", () => h2.querySelectorAll(".ch").forEach(c => c.style.setProperty("--lift", "0px")));
-  }
+  const sig = $("#ctSig"); if (reduce) return;
+  const write = () => { sig.classList.remove("wait", "write"); void sig.offsetWidth; sig.classList.add("write"); };
+  sig.classList.add("wait"); sig.addEventListener("click", write);
+  let loop;
+  new IntersectionObserver(es => { clearInterval(loop); if (es[0].isIntersecting) { write(); loop = setInterval(write, 6500); } }, { threshold: .6 }).observe(sig);
 })();
