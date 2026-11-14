@@ -445,7 +445,7 @@ const TOOLS = ["Figma", "Adobe", "Miro", "HTML", "CSS", "JavaScript", "VS Code",
 const TOOLS_KEY = 6;
 const slug = t => t.toLowerCase().replace(/ /g, "-");
 $("#mrow").innerHTML = [...TOOLS, ...TOOLS].map((t, i) => `<span class="${i % TOOLS.length < TOOLS_KEY ? "key" : ""}${i % TOOLS.length === 0 ? " first" : ""}" data-tool="${slug(t)}">${t}</span>`).join("");
-TOOLS.forEach(t => { const u = `img/outils/${slug(t)}.png`, im = new Image();
+TOOLS.forEach(t => { const u = `outils/${slug(t)}.png`, im = new Image();
   im.onload = () => $$(`#mrow [data-tool="${slug(t)}"]`).forEach(s => { const i = document.createElement("i"); i.style.webkitMaskImage = i.style.maskImage = `url(${u})`; s.prepend(i); });
   im.src = u; });
 { const mq = $("#marquee"); mq.classList.add("wait"); const io = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { mq.classList.remove("wait"); io.disconnect(); } }), { threshold: .4 }); io.observe(mq); }
@@ -692,14 +692,14 @@ function buildVrbal() {
   host.querySelectorAll("[data-alt]").forEach(el => el.alt = t.alt[el.dataset.alt]);
   const hero = host.querySelector("[data-auto]"), ph = host.querySelector("[data-hover-pause]");
   vidCtl(ph, hero);
-  initSV(host, t, null, "img/vrbal/etape-");
+  initSV(host, t, null, "vrbal/etape-");
   const map = host.querySelector("[data-map]"), ms = host.querySelector("[data-mapseg]");
   ms.querySelectorAll("button").forEach(b => b.addEventListener("click", () => { const loud = b.dataset.m === "loud"; map.classList.toggle("loud", loud); ms.dataset.lang = loud ? "en" : "fr"; ms.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", x === b)); }));
   initKit(host, t);
 }
 function initKit(host, t) {
   const box = host.querySelector("[data-vk]"); if (!box) return;
-  const k = t.kit, P = "img/vrbal/kit/", panel = box.querySelector("[data-vkpanel]"), cta = box.querySelector("[data-vkopen]");
+  const k = t.kit, P = "vrbal/kit/", panel = box.querySelector("[data-vkpanel]"), cta = box.querySelector("[data-vkopen]");
   const X = { fr: { closedH: "Dans le carnet", closedP: "Remis à l'équipe après l'immersion pour mener l'atelier sur la fresque collective : une lettre, une consigne recto verso et trois familles de cartes.", openH: "À vous de jouer", openP: "Touchez un point sur le carnet pour sortir un élément du kit.", flip: "Retourner la fiche", recto: "Recto", verso: "Verso", letterAlt: "Lettre manuscrite de Sarah, job coach, adressée au salarié (prénom et magasin masqués)", rectoAlt: "Recto de la consigne : « À vous de jouer l'équipe ! », le but de l'atelier", versoAlt: "Verso de la consigne : les trois étapes de l'atelier sur la fresque" },
               en: { closedH: "Inside the booklet", closedP: "Handed to the team after the immersion to run the workshop on the shared mural: a letter, a two-sided brief and three families of cards.", openH: "Your turn", openP: "Tap a dot on the booklet to take an item out of the kit.", flip: "Flip the brief", recto: "Front", verso: "Back", letterAlt: "Handwritten letter from Sarah, job coach, to the employee (name and store hidden)", rectoAlt: "Front of the brief: “Your turn, team!”, the workshop's goal", versoAlt: "Back of the brief: the three workshop steps on the fresco" } }[lang];
   const A = box.querySelector("[data-vkimg=a]"), B = box.querySelector("[data-vkimg=b]"), back = box.querySelector("[data-vkback]");
@@ -930,8 +930,8 @@ function buildEccc() {
     host.querySelector("[data-code]").textContent = t.station + " " + b.textContent;
     host.querySelector("[data-name]").textContent = name || t.station + " " + b.textContent;
     host.querySelector("[data-ptags]").innerHTML = (b.classList.contains("d") ? `<span>${t.tD}</span>` : "") + (b.classList.contains("a") ? `<span>${t.tA}</span>` : "");
-    imgs = s.r.map(r => ({ kind: "r", src: "img/eccc/rendus/" + r + ".jpg", alt: t.alt.render + " " + b.textContent }));
-    if (s.p) imgs.unshift({ kind: "p", src: "img/eccc/photo-" + s.p + ".jpg", alt: t.alt.photo + " " + b.textContent });
+    imgs = s.r.map(r => ({ kind: "r", src: "eccc/rendus/" + r + ".jpg", alt: t.alt.render + " " + b.textContent }));
+    if (s.p) imgs.unshift({ kind: "p", src: "eccc/photo-" + s.p + ".jpg", alt: t.alt.photo + " " + b.textContent });
     cur = 0; seg.hidden = !s.p;
     dots.innerHTML = imgs.length > 1 ? imgs.map((x, j) => `<button type="button" aria-label="${x.kind === "p" ? t.photo : t.render + " " + (j + (s.p ? 0 : 1))}"></button>`).join("") : "";
     dots.querySelectorAll("button").forEach((d, j) => d.addEventListener("click", () => { cur = j; paint(); }));
@@ -1023,7 +1023,7 @@ function buildReadz() {
     b.addEventListener("mouseenter", () => pick(i)); b.addEventListener("focus", () => pick(i));
   });
   pick(0);
-  initSV(host, t, b => "video/readz-" + b.dataset.v + ".mp4", "img/readz/etape-");
+  initSV(host, t, b => "video/readz-" + b.dataset.v + ".mp4", "readz/etape-");
   const strip = host.querySelector("[data-strip]");
   let d = null;
   strip.addEventListener("pointerdown", e => { if (e.pointerType !== "mouse") return; d = { x: e.clientX, l: strip.scrollLeft }; strip.setPointerCapture(e.pointerId); });
@@ -1061,7 +1061,7 @@ function fillDuo(duo, key, t, fade) {
   duo.querySelectorAll("[data-img]").forEach(scr => {
     const v = scr.dataset.img, m = v === "mobile", w = m ? 638 : 1400, h = LB[key][+m], n = Math.ceil(h / 2000);
     const set = () => {
-      scr.replaceChildren(...Array.from({ length: n }, (_, i) => { const im = new Image(w, i < n - 1 ? 2000 : h - 2000 * (n - 1)); im.decoding = "async"; im.alt = i ? "" : t.alt[key] + ", " + t.alt[v]; im.src = `img/maison-123/${key}-${v}-${i + 1}.jpg`; return im; }));
+      scr.replaceChildren(...Array.from({ length: n }, (_, i) => { const im = new Image(w, i < n - 1 ? 2000 : h - 2000 * (n - 1)); im.decoding = "async"; im.alt = i ? "" : t.alt[key] + ", " + t.alt[v]; im.src = `maison-123/${key}-${v}-${i + 1}.jpg`; return im; }));
       scr.scrollTop = 0; requestAnimationFrame(() => scr.classList.remove("out"));
     };
     if (fade && !reduce) { scr.classList.add("out"); setTimeout(set, 250); } else set();
@@ -1284,7 +1284,7 @@ const LEGAL = {
 { const d = $("#cvDlg"), a = $("#cvLink");
   a.addEventListener("click", e => { e.preventDefault(); const t = T[lang], g = $("#cvGet"), im = $("#cvImg");
     $("#cvT").textContent = t.cv; g.textContent = t.cvGet; g.href = a.href; $("#cvX").textContent = LEGAL[lang].x + " ✕︎";
-    im.src = a.getAttribute("href").replace("cv/", "img/cv/").replace(".pdf", ".jpg"); im.alt = t.cvAlt; d.showModal(); });
+    im.src = a.getAttribute("href").replace(".pdf", ".jpg"); im.alt = t.cvAlt; d.showModal(); });
   $("#cvX").addEventListener("click", () => d.close());
   d.addEventListener("click", e => { if (e.target === d) d.close(); }); }
 { const d = $("#legal");
